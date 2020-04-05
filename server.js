@@ -11,6 +11,14 @@ dotenv.config({ path: './config/config.env'});
 
 const app = express();
 
+// load middlewares
+
+const logger = require('./middleware/logger');
+
+// use middleware
+
+app.use(logger);
+
 // mount routes 
 
 app.use('/api/v1/bootcamps', bootcamps)
