@@ -17,6 +17,10 @@ connectDB();
 
 const app = express();
 
+// Body Parser
+
+app.use(express.json());
+
 // load middlewares
 
 const logger = require('./middleware/logger');
